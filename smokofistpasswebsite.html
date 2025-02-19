@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>smokomama</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            font-family: 'Arial Black', sans-serif;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        .chrome-text {
+            background: linear-gradient(45deg, #8B8B8B, #FFFFFF, #8B8B8B);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 10px rgba(255,255,255,0.3);
+        }
+
+        header {
+            text-align: center;
+            padding: 2rem;
+            border-bottom: 3px solid #666666;
+        }
+
+        .cta {
+            font-size: 2.5rem;
+            margin: 2rem 0;
+            text-transform: uppercase;
+        }
+
+        .logo-space {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            border: 3px dashed #666666;
+            background-color: #1A1A1A;
+        }
+
+        .main-image {
+            width: 80%;
+            height: 400px;
+            margin: 2rem auto;
+            border: 5px solid #666666;
+            background-color: #1A1A1A;
+        }
+
+        .club-form {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        input[type="email"] {
+            background: #000000;
+            border: 2px solid #666666;
+            color: #ffffff;
+            padding: 1rem;
+            margin: 1rem;
+            width: 300px;
+        }
+
+        button {
+            background: #000000;
+            border: 2px solid #666666;
+            color: #ffffff;
+            padding: 1rem 2rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        button:hover {
+            background: #666666;
+        }
+
+        .lore-generator {
+            text-align: center;
+            padding: 2rem;
+            border-top: 3px solid #666666;
+            margin-top: 2rem;
+        }
+
+        #lore-output {
+            margin: 1rem auto;
+            width: 70%;
+            min-height: 100px;
+            padding: 1rem;
+            border: 2px dashed #666666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-space"><!-- Upload logo here --></div>
+        <h1 class="chrome-text">smoko</h1>
+        <div class="cta chrome-text">BECOME WHO YOU BURN TO BE</div>
+    </header>
+
+    <div class="main-image"><!-- Upload main image here --></div>
+
+    <div class="club-form">
+        <h2 class="chrome-text">JOIN THE SMOKO CREW</h2>
+        <form>
+            <input type="email" placeholder="ENTER YOUR FIRE" required>
+            <button type="submit">IGNITE</button>
+        </form>
+    </div>
+
+    <div class="lore-generator">
+        <button onclick="generateLore()">FEED THE LORE</button>
+        <div id="lore-output"></div>
+    </div>
+
+    <script>
+        const loreStories = [
+            "Smoko the Ghost Cat rides the neon wave, her nine lives spent chasing eternal dawn.",
+            "They say when the concrete meets the sea, Smoko's shadow guides lost souls to self-creation.",
+            "Born from skate wax and saltwater, Smoko's purr vibrates at the frequency of becoming.",
+            "Her claws scratch reality's surface, revealing the chrome truth beneath the world's dull paint.",
+            "Smoko's third eye sees your raw form - the you that's waiting to emerge from the smoke.",
+            "She collects abandoned identities in her jaws, forging them into new selves in midnight fires."
+        ];
+
+        function generateLore() {
+            const output = document.getElementById('lore-output');
+            const randomLore = loreStories[Math.floor(Math.random() * loreStories.length)];
+            output.innerHTML = `<p>"${randomLore}"</p>`;
+        }
+    </script>
+</body>
+</html>
