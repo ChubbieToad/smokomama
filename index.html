@@ -34,12 +34,15 @@
         }
 
         .logo-space {
-            width: 200px;
+            width: 200px;  /* Display size */
             height: 200px;
             margin: 0 auto;
-            /* Remove border and background if desired */
-            border: none;
-            background-color: transparent;
+            background: transparent;
+            overflow: hidden;
+            image-rendering: -moz-crisp-edges;
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+            -ms-interpolation-mode: nearest-neighbor;
         }
         
         .main-image {
@@ -96,12 +99,11 @@
 </head>
 <body>
     <header>
-                                                    <a href="#">
-                                                <img src="images/smoko-logo.png" 
-                                                     alt="Smokomama Logo" 
-                                                     class="logo-space"
-                                                     style="object-fit: contain; width: 100%; height: 100%;">
-                                                    </a>
+                                                <a href="#">
+                                                    <img src="images/smoko-logo.png" 
+                                                         alt="Smokomama Logo"
+                                                         style="width: 100%; height: 100%; object-fit: contain; image-rendering: optimizeQuality;">
+                                                </a>
         <h1 class="chrome-text">smoko</h1>
         <div class="cta chrome-text">BECOME WHO YOU BURN TO BE</div>
     </header>
